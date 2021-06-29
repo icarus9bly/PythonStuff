@@ -1,0 +1,11 @@
+...     if menu is None:                                                        
+...         menu = []                                                           
+...     menu.append('spam')                                                     
+...     return menu                                                             
+...                                                                             
+>>> add_spam()                                                                  
+['spam']                                                                        
+>>> add_spam()                                                                  
+['spam']                                                                        
+>>> add_spam()                                                                  
+['spam']                                                                        

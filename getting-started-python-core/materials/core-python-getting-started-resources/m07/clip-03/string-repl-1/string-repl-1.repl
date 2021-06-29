@@ -1,0 +1,8 @@
+58                                                                              
+>>> "New" + "found" + "land"                                                    
+'Newfoundland'                                                                  
+>>> s = "New"                                                                   
+>>> s += "found"                                                                
+>>> s += "land"                                                                 
+>>> s                                                                           
+'Newfoundland'                                                                  

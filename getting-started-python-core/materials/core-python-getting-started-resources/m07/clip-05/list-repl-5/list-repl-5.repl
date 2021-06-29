@@ -1,0 +1,17 @@
+>>> w                                                                           
+['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']         
+>>> i = w.index('fox')                                                          
+>>> i                                                                           
+3                                                                               
+>>> w[i]                                                                        
+'fox'                                                                           
+>>> w.index('unicorn')                                                          
+Traceback (most recent call last):                                              
+  File "<stdin>", line 1, in <module>                                           
+ValueError: 'unicorn' is not in list                                            
+>>> w.count("the")                                                              
+2                                                                               
+>>> 37 in [1, 78, 9, 37, 34, 53]                                                
+True                                                                            
+>>> 78 not in [1, 78, 9, 37, 34, 53]                                            
+False                                                                           

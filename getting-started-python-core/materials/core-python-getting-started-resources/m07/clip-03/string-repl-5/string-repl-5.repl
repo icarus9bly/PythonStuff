@@ -1,0 +1,35 @@
+>>> value = 4 * 20                                                              
+>>> f'The value is {value}'                                                     
+'The value is 80'                                                               
+>>> import datetime                                                             
+>>> f'The current time is {datetime.datetime.now().isoformat()}.'               
+'The current time is 2020-04-15T13:30:52.038466.'                               
+>>> import math                                                                 
+>>> f'Math constants: pi={math.pi}, e={math.e}'                                 
+'Math constants: pi=3.141592653589793, e=2.718281828459045'                     
+>>> f'Math constants: pi={math.pi:.3f}, e={math.e:.3f}'                         
+'Math constants: pi=3.142, e=2.718'                                             
+>>> help(str)                                                                   
+Help on class str in module builtins:                                           
+                                                                                
+class str(object)                                                               
+ |  str(object='') -> str                                                       
+ |  str(bytes_or_buffer[, encoding[, errors]]) -> str                           
+ |                                                                              
+ |  Create a new string object from the given object. If encoding or            
+ |  errors is specified, then the object must expose a data buffer              
+ |  that will be decoded using the given encoding and error handler.            
+ |  Otherwise, returns the result of object.__str__() (if defined)              
+ |  or repr(object).                                                            
+ |  encoding defaults to sys.getdefaultencoding().                              
+ |  errors defaults to 'strict'.                                                
+ |                                                                              
+ |  Methods defined here:                                                       
+ |                                                                              
+ |  __add__(self, value, /)                                                     
+ |      Return self+value.                                                      
+ |                                                                              
+ |  __contains__(self, key, /)                                                  
+ |      Return key in self.                                                     
+ |                                                                              
+ |  __eq__(self, value, /)                                                      

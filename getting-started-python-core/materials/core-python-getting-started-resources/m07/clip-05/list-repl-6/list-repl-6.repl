@@ -1,0 +1,13 @@
+>>> u                                                                           
+['jackdaws', 'love', 'my', 'big', 'sphinx', 'of', 'quartz']                     
+>>> del u[3]                                                                    
+>>> u                                                                           
+['jackdaws', 'love', 'my', 'sphinx', 'of', 'quartz']                            
+>>> u.remove('jackdaws')                                                        
+>>> u                                                                           
+['love', 'my', 'sphinx', 'of', 'quartz']                                        
+>>> del u[u.index('quartz')]                                                    
+>>> u.remove('pyramid')                                                         
+Traceback (most recent call last):                                              
+  File "<stdin>", line 1, in <module>                                           
+ValueError: list.remove(x): x not in list                                       

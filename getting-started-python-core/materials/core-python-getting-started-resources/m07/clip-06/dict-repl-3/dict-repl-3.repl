@@ -1,0 +1,15 @@
+>>> e = d.copy()                                                                
+>>> e                                                                           
+{'goldenrod': 14329120, 'indigo': 4915330, 'seashell': 16774638}                
+>>> f = dict(e)                                                                 
+>>> f                                                                           
+{'goldenrod': 14329120, 'indigo': 4915330, 'seashell': 16774638}                
+>>> g = dict(wheat=0xF5DEB3, khaki=0xF0E68C, crimson=0xDC143C)                  
+>>> f.update(g)                                                                 
+>>> f                                                                           
+{'goldenrod': 14329120, 'indigo': 4915330, 'seashell': 16774638, 'wheat': 161133
+31, 'khaki': 15787660, 'crimson': 14423100}                                     
+>>> stocks = {'GOOG': 891, 'AAPL': 416, 'IBM': 194}                             
+>>> stocks.update({'GOOG': 894, 'YHOO': 25})                                    
+>>> stocks                                                                      
+{'GOOG': 894, 'AAPL': 416, 'IBM': 194, 'YHOO': 25}                              

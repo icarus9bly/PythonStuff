@@ -1,0 +1,7 @@
+>>> a                                                                           
+['I', 'accidentally', 'the', 'whole', 'universe']                               
+>>> a.insert(2, "destroyed")                                                    
+>>> a                                                                           
+['I', 'accidentally', 'destroyed', 'the', 'whole', 'universe']                  
+>>> ' '.join(a)                                                                 
+'I accidentally destroyed the whole universe'                                   

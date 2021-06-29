@@ -1,0 +1,7 @@
+>>> q = [4, 7, 11]                                                              
+>>> p == q                                                                      
+True                                                                            
+>>> p is q                                                                      
+False                                                                           
+>>> p == p                                                                      
+True                                                                            

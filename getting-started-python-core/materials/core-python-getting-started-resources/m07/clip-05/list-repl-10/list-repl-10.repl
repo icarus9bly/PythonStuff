@@ -1,0 +1,10 @@
+lit()                                                                           
+>>> h                                                                           
+['not', 'perplexing', 'do', 'handwriting', 'family', 'where', 'I', 'illegibly', 
+'know', 'doctors']                                                              
+>>> h.sort(key=len)                                                             
+>>> h                                                                           
+['I', 'do', 'not', 'know', 'where', 'family', 'doctors', 'illegibly', 'perplexin
+g', 'handwriting']                                                              
+>>> ' '.join(h)                                                                 
+'I do not know where family doctors illegibly perplexing handwriting'           

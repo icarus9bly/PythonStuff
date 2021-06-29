@@ -1,0 +1,22 @@
+>>> def banner(message, border='-'):                                            
+...     line = border * len(message)                                            
+...     print(line)                                                             
+...     print(message)                                                          
+...     print(line)                                                             
+...                                                                             
+>>> banner("Norwegian Blue")                                                    
+--------------                                                                  
+Norwegian Blue                                                                  
+--------------                                                                  
+>>> banner("Sun, Moon and Stars", "*")                                          
+*******************                                                             
+Sun, Moon and Stars                                                             
+*******************                                                             
+>>> banner("Sun, Moon and Stars", border="*")                                   
+*******************                                                             
+Sun, Moon and Stars                                                             
+*******************                                                             
+>>> banner(border=".", message="Hello from Earth")                              
+................                                                                
+Hello from Earth                                                                
+................                                                                

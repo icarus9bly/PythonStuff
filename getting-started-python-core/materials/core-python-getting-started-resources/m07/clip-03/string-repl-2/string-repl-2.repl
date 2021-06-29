@@ -1,0 +1,6 @@
+>>> colors                                                                      
+'#45ff23;#2321fa;#1298a3;#a32312'                                               
+>>> colors.split(';')                                                           
+['#45ff23', '#2321fa', '#1298a3', '#a32312']                                    
+>>> ''.join(['high', 'way', 'man'])                                             
+'highwayman'                                                                    

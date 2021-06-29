@@ -1,0 +1,9 @@
+3) ]                                                                            
+>>> d = dict(names_and_ages)                                                    
+>>> d                                                                           
+{'Alice': 32, 'Bob': 48, 'Charlie': 28, 'Daniel': 33}                           
+>>> phonetic = dict(a='alfa', b='bravo', c='charlie', d='delta', e='echo', f='fo
+xtrot')                                                                         
+>>> phonetic                                                                    
+{'a': 'alfa', 'b': 'bravo', 'c': 'charlie', 'd': 'delta', 'e': 'echo', 'f': 'fox
+trot'}                                                                          

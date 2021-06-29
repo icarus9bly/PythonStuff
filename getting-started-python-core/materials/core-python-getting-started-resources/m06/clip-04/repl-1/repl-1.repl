@@ -1,0 +1,15 @@
+...     return a + b                                                            
+...                                                                             
+>>> add(5, 7)                                                                   
+12                                                                              
+>>> add(3.1, 2.4)                                                               
+5.5                                                                             
+>>> add("news", "paper")                                                        
+'newspaper'                                                                     
+>>> add([1, 6], [21, 107])                                                      
+[1, 6, 21, 107]                                                                 
+>>> add("The answer is", 42)                                                    
+Traceback (most recent call last):                                              
+  File "<stdin>", line 1, in <module>                                           
+  File "<stdin>", line 2, in add                                                
+TypeError: can only concatenate str (not "int") to str                          

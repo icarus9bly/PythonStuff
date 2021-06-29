@@ -1,0 +1,47 @@
+...               chartreuse='#7FFF00', cornflower='#6495ED',                   
+...               firebrick='#B22222', honeydew='#F0FFF0',                      
+...               maroon='#B03060', sienna='#A0522D')                           
+>>> for key in colors:                                                          
+...     print(f"{key} => {colors[key]}")                                        
+...                                                                             
+aquamarine => #7FFFD4                                                           
+burlywood => #DEB887                                                            
+chartreuse => #7FFF00                                                           
+cornflower => #6495ED                                                           
+firebrick => #B22222                                                            
+honeydew => #F0FFF0                                                             
+maroon => #B03060                                                               
+sienna => #A0522D                                                               
+>>> for value in colors.values():                                               
+...     print(value)                                                            
+...                                                                             
+#7FFFD4                                                                         
+#DEB887                                                                         
+#7FFF00                                                                         
+#6495ED                                                                         
+#B22222                                                                         
+#F0FFF0                                                                         
+#B03060                                                                         
+#A0522D                                                                         
+>>> for key in colors.keys():                                                   
+...     print(key)                                                              
+...                                                                             
+aquamarine                                                                      
+burlywood                                                                       
+chartreuse                                                                      
+cornflower                                                                      
+firebrick                                                                       
+honeydew                                                                        
+maroon                                                                          
+sienna                                                                          
+>>> for key, value in colors.items():                                           
+...     print(f"{key} => {value}")                                              
+...                                                                             
+aquamarine => #7FFFD4                                                           
+burlywood => #DEB887                                                            
+chartreuse => #7FFF00                                                           
+cornflower => #6495ED                                                           
+firebrick => #B22222                                                            
+honeydew => #F0FFF0                                                             
+maroon => #B03060                                                               
+sienna => #A0522D                                                               

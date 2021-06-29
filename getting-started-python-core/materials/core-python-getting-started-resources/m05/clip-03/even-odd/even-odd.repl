@@ -1,0 +1,9 @@
+...     if n % 2 == 0:                                                          
+...         print("even")                                                       
+...         return                                                              
+...     print("odd")                                                            
+...                                                                             
+>>> w = even_or_odd(31)                                                         
+odd                                                                             
+>>> w is None                                                                   
+True                                                                            
