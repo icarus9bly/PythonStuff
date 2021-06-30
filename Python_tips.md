@@ -146,7 +146,8 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 "foo 'bar'"
 ```
 **Error Handling:**    
-- Avoid adding type checks for e.g. isinstance alternatively you can use except 
+- Avoid adding type checks for e.g. isinstance alternatively you can use except .
+- Errors are like bells if we make them silent they are of no use.
 - Look before you leap (LBYL) vs Easier to ask for forgiveness Than permission (EAFP)
 	- Python **recommands using EAFP** 
 		```python
