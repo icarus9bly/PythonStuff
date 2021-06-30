@@ -135,3 +135,12 @@ john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy
 
 **Design Patterns:**
 https://app.pluralsight.com/library/courses/python-design-patterns/
+
+**String vs Repr Representation \_\_repr\_\_ vs \_\_str\_\_**:    
+- str is generally a little more human friendly, repr is generally more precise.
+- In str.format, !s chooses to use str to format the object whereas !r chooses repr to format the value.
+```python
+'foo {}'.format('bar')
+'foo bar'
+'foo {!r}'.format('bar')
+"foo 'bar'"
