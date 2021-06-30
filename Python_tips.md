@@ -149,3 +149,12 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 - Avoid adding type checks for e.g. isinstance alternatively you can use except 
 - Look before you leap (LBYL) vs Easier to ask for forgiveness Than permission (EAFP)
 	- Python **recommands using EAFP** 
+		```python
+		#LBYL Approach
+		import os
+		p = 'path/to/datfile.dat'
+		if os.path.exits(p):
+			process_file(p)
+		else:
+			print(f"No such file as {p}")
+		```
