@@ -148,6 +148,7 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 **Error Handling:**    
 - Avoid adding type checks for e.g. isinstance alternatively you can use except .
 - Errors are like bells if we make them silent they are of no use.
+- 'Finally' runs not matter if an exception was raise or not, so it can be used as try/execpt/finally or try/finally(If we don't want to handle the error)
 - Look before you leap (LBYL) vs Easier to ask for forgiveness Than permission (EAFP)
 	- Python **recommands using EAFP** 
 		```python
