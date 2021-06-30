@@ -144,3 +144,7 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 'foo bar'
 'foo {!r}'.format('bar')
 "foo 'bar'"
+```
+**Error Handling:**    
+- Avoid adding type checks for e.g. isinstance alternatively you can use except 
+- 
