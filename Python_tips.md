@@ -147,4 +147,5 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 ```
 **Error Handling:**    
 - Avoid adding type checks for e.g. isinstance alternatively you can use except 
-- 
+- Look before you leap (LBYL) vs Easier to ask for forgiveness Than permission (EAFP)
+	- Python **recommands using EAFP** 
