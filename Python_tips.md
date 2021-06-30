@@ -153,8 +153,14 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 		#LBYL Approach
 		import os
 		p = 'path/to/datfile.dat'
+		#there can be many error which are possible so we will have to handle everything
 		if os.path.exits(p):
 			process_file(p)
 		else:
 			print(f"No such file as {p}")
+		#EAFP Approach
+		try:
+			process_file(p)
+		except OSError as e:
+			print(f"Error {e}")
 		```
