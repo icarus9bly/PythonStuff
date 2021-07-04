@@ -125,6 +125,10 @@ john = Person("John Doe", ["Timmy", "Jimmy"])
 john # Person(name='John Doe', children=['Timmy', 'Jimmy'])
 john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy', 'Tina'])
 ```
+**Object orientation:**
+- https://app.pluralsight.com/library/courses/core-python-classes-object-orientation
+
+
 **Principles of Object Oriented Design:**
 - **SOLID** accronym:
 	- Single Responsibility (**Class should have only one responsibility for e.g. cooking or washing up but not both**)
