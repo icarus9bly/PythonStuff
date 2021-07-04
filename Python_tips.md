@@ -125,6 +125,10 @@ john = Person("John Doe", ["Timmy", "Jimmy"])
 john # Person(name='John Doe', children=['Timmy', 'Jimmy'])
 john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy', 'Tina'])
 ```
+**Object orientation:**
+- https://app.pluralsight.com/library/courses/core-python-classes-object-orientation
+
+
 **Principles of Object Oriented Design:**
 - **SOLID** accronym:
 	- Single Responsibility (**Class should have only one responsibility for e.g. cooking or washing up but not both**)
@@ -135,3 +139,34 @@ john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy
 
 **Design Patterns:**
 https://app.pluralsight.com/library/courses/python-design-patterns/
+
+**String vs Repr Representation \_\_repr\_\_ vs \_\_str\_\_**:    
+- str is generally a little more human friendly, repr is generally more precise.
+- In str.format, !s chooses to use str to format the object whereas !r chooses repr to format the value.
+```python
+'foo {}'.format('bar')
+'foo bar'
+'foo {!r}'.format('bar')
+"foo 'bar'"
+```
+**Error Handling:**    
+- Avoid adding type checks for e.g. isinstance alternatively you can use except .
+- Errors are like bells if we make them silent they are of no use.
+- 'Finally' runs not matter if an exception was raise or not, so it can be used as try/execpt/finally or try/finally(If we don't want to handle the error)
+- Look before you leap (LBYL) vs Easier to ask for forgiveness Than permission (EAFP)
+	- Python **recommands using EAFP** 
+		```python
+		#LBYL Approach
+		import os
+		p = 'path/to/datfile.dat'
+		#there can be many error which are possible so we will have to handle everything
+		if os.path.exits(p):
+			process_file(p)
+		else:
+			print(f"No such file as {p}")
+		#EAFP Approach
+		try:
+			process_file(p)
+		except OSError as e:
+			print(f"Error {e}")
+		```
