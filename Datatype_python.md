@@ -1,0 +1,10 @@
+- Sequence types
+  - list
+  - tuple
+  - range
+  - byte
+  - bytearray
+  - memoryview
+  - str
+- Mapping types
+  - dict
