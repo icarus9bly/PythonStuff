@@ -127,6 +127,9 @@ john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy
 ```
 **Object orientation:**
 - https://app.pluralsight.com/library/courses/core-python-classes-object-orientation
+- Behaviour vs Data classes (https://www.youtube.com/watch?v=vRVVyl9uaZc):
+	-  Some classes are mostly containers of behaviour e.g. class to draw a shape.
+	-  Some classes acts more like containers of data e.g. class to represent a polygonal mesh e.g. a vehicle
 
 
 **Principles of Object Oriented Design:**
