@@ -1,4 +1,4 @@
-# Zen of Python
+# Zen of Python (https://towardsdatascience.com/how-to-be-pythonic-and-why-you-should-care-188d63a5037e)
     - Beautiful is better than ugly.
     - Explicit is better than implicit.
     - Simple is better than complex.
