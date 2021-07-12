@@ -18,3 +18,29 @@
     - If the implementation is hard to explain, it’s a bad idea.
     - If the implementation is easy to explain, it may be a good idea.
     - Namespaces are one honking great idea — let’s do more of those!
+```c
+#include <stdbool.h>
+char * arr[] = {"apples", "oranges", "bananas", "grapes"};
+char * s = "cherries";
+bool found = false;
+int len = sizeof(arr) / sizeof(arr[0]);
+for (int i = 0; i < len; i++) {
+    if (!strcmp(arr[i], s)) {
+        found = true;
+    }
+}
+```
+
+```python
+# Unpythonic (Direct translation of the cwould be this)
+arr = ["apples", "oranges", "bananas", "grapes"]
+s = "cherries"
+found = False
+size = len(arr)
+for i in range(0, size):
+    if arr[i] == s:
+        found = True
+#Pythonic
+arr = ["apples", "oranges", "bananas", "grapes"]
+found = "cherries" in arr
+```
