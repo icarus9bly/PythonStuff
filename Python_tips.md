@@ -173,3 +173,12 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 		except OSError as e:
 			print(f"Error {e}")
 		```
+# Polymorphism:		
+    - Python program to demonstrate in-built poly-
+    - morphic functions
+  
+    - len() being used for a string
+    print(len("geeks"))
+  
+    - len() being used for a list
+    print(len([10, 20, 30]))
