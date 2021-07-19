@@ -1,4 +1,5 @@
 def countSwaps(a):
+    """Iterate over all elements in unsorted array as many times the list in not sorted and swap whenever not norted elements encountered"""
     # Write your code here
     # a =[10,5,6,7,36]
     countSwapu = 0
