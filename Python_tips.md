@@ -69,6 +69,8 @@ if user: # __this is bad because there is no indication of why type of object it
 **Ο(1)** The cost of this algo is same regardless of the input size (Don't confuse fixed cost with fast).  
 **Ο(log n)** The cost of these algo does not increase, as the same rate as the input grows. These work by dividing a large problem in small and smaller chunks.  
 **O(n<sup>2</sup>)** are the algo where the resource usage is the squared of input. E.g. is the doubly nested loop on the same array.  
+nested for loops are O(m*n)
+two for loops are O(2n) where constant can be dropped O(n)
 **Examples:** 
 Suppose if we have to search through a collection of one million record and we have 0(1) of 1m, Than 🤪
 | Big-O notation | Elapsed time | 
