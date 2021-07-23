@@ -62,39 +62,6 @@ if user: # __this is bad because there is no indication of why type of object it
 #### Repr over str
 3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object.
 
-#### Asymptotic Analysis (Big-O(worst case), Big-Omega(best case) Notation). 
-**Big-O notation:** is the performance of an algorithm when an input approaches upper limit.  
-**O(n+1) is same as O(n)** because the curve will still remain the same as variable 'n' is same.  
-**O(2n) is same as O(n)** because both have the same linear growth, so we can say constant multiplier are also ignored.  
-**Ο(1)** The cost of this algo is same regardless of the input size (Don't confuse fixed cost with fast).  
-**Ο(log n)** The cost of these algo does not increase, as the same rate as the input grows. These work by dividing a large problem in small and smaller chunks.  
-**O(n<sup>2</sup>)** are the algo where the resource usage is the squared of input. E.g. is the doubly nested loop on the same array.  
-nested for loops are O(m*n)
-two for loops are O(2n) where constant can be dropped O(n)
-**Examples:** 
-Suppose if we have to search through a collection of one million record and we have 0(1) of 1m, Than 🤪
-| Big-O notation | Elapsed time | 
-| -------------   | ---------- |
-|0(1) |  1ms |
-|O(log n) | 6 ms | 
-|O(n) | 16 min | 
-|O(n<sup>2</sup>)| 11 days | 
-|O(n<sup>3</sup>) | 31 million years |
-
-Quick sort has worst case complexity of O(n<sup>2</sup>) but an average complexity of o(nlogn). This makes it good general purpose sorting algo but we should also be aware about the worst case scenario aswell.   
-
-Following is a list of some common asymptotic notations − 
-|Name | Big-O Notation |
-| ------------  | ---------- |
-| constant	|	Ο(1) | 
-| logarithmic	|	Ο(log n) |
-| linear	|	Ο(n) |
-| n log n	|	Ο(n log n) |
-| quadratic	|	Ο(n<sup>2</sup>) |
-| cubic	|	Ο(n<sup>3</sup>) | 
-| polynomial	|	n<sup>Ο(1)</sup> |
-| exponential	|	2<sup>Ο(n)</sup> |
-
 **Recursion:**  
 https://www.youtube.com/watch?v=AfBqVVKg4GE
 
