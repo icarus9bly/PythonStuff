@@ -56,7 +56,7 @@ if user: # __this is bad because there is no indication of why type of object it
 #### Repr over str
 3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object.
 For e.g.
-class Point2D:
+```python class Point2D:
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -66,6 +66,7 @@ class Point2D:
 
     def __repr__(self):
         return 'Point2D(x={}, y={})'.format(self.x, self.y)
+```		
 #### Force format to use repr or str representation
 Format defaults to str.
 ``` python 
