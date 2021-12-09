@@ -42,12 +42,6 @@ timeit.timeit('l.index(999_999)', setup='l = list(range(0, 1_000_000))', number=
 - **timer:** which is a timeit.Timer object; it usually has a sensible default value so you don’t have to worry about it.
 - **number:** which is the number of executions you’d like to run the stmt.
 
-#### Force format to use repr or str representation
-Format defaults to str.
-``` python 
-    {!r}.format(Point(7,8)) # To use repr
-    {!s}.format(Point(7,8)) # To use string
-```
 ### BEST PRATICES
 https://www.youtube.com/watch?v=ZdVgwhHXMpE  
 #### PEP 20 | Explicit is better than implicit.
@@ -61,6 +55,34 @@ if user: # __this is bad because there is no indication of why type of object it
 
 #### Repr over str
 3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object.
+For e.g.
+class Point2D:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return '({}, {})'.format(self.x, self.y)
+
+    def __repr__(self):
+        return 'Point2D(x={}, y={})'.format(self.x, self.y)
+#### Force format to use repr or str representation
+Format defaults to str.
+``` python 
+    {!r}.format(Point(7,8)) # To use repr
+    {!s}.format(Point(7,8)) # To use string
+```
+
+**String vs Repr Representation \_\_repr\_\_ vs \_\_str\_\_**:    
+- str is generally a little more human friendly, repr is generally more precise.
+- In str.format, !s chooses to use str to format the object whereas !r chooses repr to format the value.
+```python
+'foo {}'.format('bar')
+'foo bar'
+'foo {!r}'.format('bar')
+"foo 'bar'"
+```
+
 
 **Recursion:**  
 https://www.youtube.com/watch?v=AfBqVVKg4GE
@@ -112,15 +134,7 @@ john.children.append("Tina") # Person(name='John Doe', children=['Timmy', 'Jimmy
 **Design Patterns:**
 https://app.pluralsight.com/library/courses/python-design-patterns/
 
-**String vs Repr Representation \_\_repr\_\_ vs \_\_str\_\_**:    
-- str is generally a little more human friendly, repr is generally more precise.
-- In str.format, !s chooses to use str to format the object whereas !r chooses repr to format the value.
-```python
-'foo {}'.format('bar')
-'foo bar'
-'foo {!r}'.format('bar')
-"foo 'bar'"
-```
+
 **Error Handling:**    
 - Avoid adding type checks for e.g. isinstance alternatively you can use except .
 - Errors are like bells if we make them silent they are of no use.
