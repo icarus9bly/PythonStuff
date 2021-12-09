@@ -54,7 +54,7 @@ if user: # __this is bad because there is no indication of why type of object it
 2. Because of eval or exec re-running to compile process i.e. (string -> Token (Lexical token)-> AST(Abstract syntax tree) -> bytecode -> run)  is a expensive process.
 
 #### Repr over str
-3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object.
+3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object. and a common guidline for a good repr is that it should display legitimate source code which when run can recreate the object. like Point2D(x={}, y={}) is create a new Point2D object with correct parameters.
 For e.g.
 ```python
 class Point2D:
