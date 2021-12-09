@@ -55,6 +55,7 @@ if user: # __this is bad because there is no indication of why type of object it
 
 #### Repr over str
 3. repr() produces an unambigous(by this we means type of the object along with any identifying fields) representation of an object. and a common guidline for a good repr is that it should display legitimate source code which when run can recreate the object. like Point2D(x={}, y={}) is create a new Point2D object with correct parameters.
+Other way of thinking is repr is good for exactness, logging and debugging.
 For e.g.
 ```python
 class Point2D:
