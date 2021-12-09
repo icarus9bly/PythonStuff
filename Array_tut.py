@@ -7,6 +7,6 @@ class MyArray():
     def __str__(self) -> str:
         return f'Data is {str(self.data)} and length of array {self.length}'
     def __repr__(self) -> str:
-        return f'Data is {str(self.data)} and length of array {self.length}'
+        return f'MyArray()'
 arr=MyArray()
-print(arr)
+print(repr(arr))
