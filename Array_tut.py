@@ -19,9 +19,11 @@ class MyArray():
     def delete(self, index):
         # Delete the item at index and shift the items from to the left
         item = self.data[index]
-        for ix, num in enumerate(self.data):
+        for ix in range(len(self.data)):
             if ix >= index:
                 self.data[index] = self.data[index+1]
+                print(ix,self.data[index])
+
         self.length -= 1
         return item
         # To be done
@@ -35,8 +37,8 @@ class MyArray():
 
 arr = MyArray()
 arr.push(34)
-arr.push(57585)
-arr.push(57.890)
+arr.push(57)
+arr.push(11)
 arr.push(89)
 # arr.pop()
 print(arr)
