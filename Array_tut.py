@@ -20,13 +20,10 @@ class MyArray():
         # Delete the item at index and shift the items from to the left
         item = self.data[index]
         for ix in range(len(self.data)):
-            if ix >= index:
-                self.data[index] = self.data[index+1]
-                print(ix,self.data[index])
-
-        self.length -= 1
+            if ix >= index and ix < self.length-1:
+                self.data[ix] = self.data[ix+1]
+        self.pop()
         return item
-        # To be done
 
     def __str__(self) -> str:
         return f'Data is {str(self.data)} and length of array {self.length}'
