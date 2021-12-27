@@ -1,3 +1,5 @@
+# Reverse this string using Array:
+# "Hi my name is Aditya" to "aytidA si eman iH"
 class MyArray():
     def __init__(self):
         self.length = 0
@@ -31,13 +33,14 @@ class MyArray():
     def __repr__(self) -> str:
         return f'MyArray()'
 
-if __name__ == "__main__":
-    arr = MyArray()
-    arr.push(34)
-    arr.push(57)
-    arr.push(11)
-    arr.push(89)
-    # arr.pop()
-    print(arr)
-    arr.delete(1)
-    print(arr)
+def reverse(data):
+    arr= MyArray()
+    rev=[]
+    # Push whole string in the Array
+    for char in data:
+        arr.push(char)
+    for elem in arr.data:
+        rev.append(arr.pop())
+    return ''.join(rev)
+
+print(reverse("Hi my name is Aditya"))
