@@ -160,8 +160,7 @@ https://app.pluralsight.com/library/courses/python-design-patterns/
 			print(f"Error {e}")
 		```
 # Polymorphism:		
-    - Python program to demonstrate in-built poly-
-    - morphic functions
+    - Python program to demonstrate in-built polymorphic functions
   
     - len() being used for a string
     print(len("geeks"))
