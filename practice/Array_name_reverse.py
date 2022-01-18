@@ -39,7 +39,7 @@ def reverse(data):
     # Push whole string in the Array
     for char in data:
         arr.push(char)
-    # Iterate over arr data and pop elems from itand also push that into reversed array. At last join all elems into a string    
+    # Iterate over arr data and pop elems from it and also push that into reversed array. At last join all elems into a string    
     for elem in arr.data:
         rev.append(arr.pop())
     return ''.join(rev)
