@@ -1,5 +1,6 @@
 # Reverse this string using Array:
 # "Hi my name is Aditya" to "aytidA si eman iH"
+# from ..Array_tut import MyArray
 class MyArray():
     def __init__(self):
         self.length = 0
@@ -26,7 +27,6 @@ class MyArray():
                 self.data[ix] = self.data[ix+1]
         self.pop()
         return item
-
     def __str__(self) -> str:
         return f'Data is {str(self.data)} and length of array {self.length}'
 
