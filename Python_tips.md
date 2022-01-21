@@ -1,3 +1,9 @@
+# Imperative vs Declarative Programming difference
+Imperative means 'HOW' (All the steps on how to acheive a result).
+Declarative means 'WHAT' (People also means 'good' by declarative)
+https://www.youtube.com/watch?v=E7Fbf7R3x6I&ab_channel=uidotdev
+
+
 ### Asyncio: Understanding Async / Await in Python
 https://www.youtube.com/watch?v=bs9tlDFWWdQ
 
