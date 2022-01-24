@@ -214,3 +214,58 @@ print(emp_1.fullname)
 
 del emp_1.fullname
 ```
+
+# Super() in python:
+
+https://www.programiz.com/python-programming/methods/built-in/super
+
+Super behaves normaly for single inheritance i.e. to access methods of the base class. Whereas for multiple inheritance, like diamond inheritance below it follows the method resolution order(MRO), which can checked with ClassName.`__mro__` . E.g. `Dog.__mro__`
+
+``` python
+class Animal:
+  def __init__(self, Animal):
+    print(Animal, 'is an animal.');
+
+class Mammal(Animal):
+  def __init__(self, mammalName):
+    print(mammalName, 'is a warm-blooded animal.')
+    super().__init__(mammalName)
+    
+class NonWingedMammal(Mammal):
+  def __init__(self, NonWingedMammal):
+    print(NonWingedMammal, "can't fly.")
+    super().__init__(NonWingedMammal)
+
+class NonMarineMammal(Mammal):
+  def __init__(self, NonMarineMammal):
+    print(NonMarineMammal, "can't swim.")
+    super().__init__(NonMarineMammal)
+
+class Dog(NonMarineMammal, NonWingedMammal):
+  def __init__(self):
+    print('Dog has 4 legs.');
+    super().__init__('Dog')
+    
+d = Dog()
+print('')
+bat = NonMarineMammal('Bat')
+
+Output
+Dog has 4 legs.
+Dog can't swim.
+Dog can't fly.
+Dog is a warm-blooded animal.
+Dog is an animal.
+
+Bat can't swim.
+Bat is a warm-blooded animal.
+Bat is an animal.
+
+Dog.__mro__
+(__main__.Dog,
+ __main__.NonMarineMammal,
+ __main__.NonWingedMammal,
+ __main__.Mammal,
+ __main__.Animal,
+ object)
+```
