@@ -1,23 +1,28 @@
-def mergeSortedArrays1(arr1, arr2):
+def mergeSortedArrays1(nums1, nums2):
   # Way 1
-  # To be done
-  merged_arr_1 = []
-  for i in range(len(arr1)):
-    for j in range(len(arr2)):
-      i_elem = arr1[i]
-      j_elem = arr2[j]
-      if i_elem in merged_arr_1 and j_elem in merged_arr_1:
-        break
-      elif i_elem in merged_arr_1:
-        merged_arr_1.append(j_elem)
-      elif j_elem in merged_arr_1:
-        merged_arr_1.append(i_elem)
-      elif i_elem < j_elem:
-        merged_arr_1.append(i_elem)
-        break
+  merged_arr=[]
+  if not nums1:
+      nums1 = nums2
+      return nums1
+  if not nums2:
+      return nums1
+  i=0
+  j=0
+  size_nums1=len(nums1)
+  size_nums2=len(nums2)
+  while i<size_nums1 and j<size_nums2:
+      if nums1[i] <= nums2[j]:
+          merged_arr.append(nums1[i])
+          i+=1
       else:
-        merged_arr_1.append(j_elem)
-  return merged_arr_1
+          merged_arr.append(nums2[j])
+          j+=1
+  if j != size_nums2:
+      merged_arr=merged_arr+nums2[j:]
+  elif i != size_nums1:
+      merged_arr=merged_arr+nums1[i:size_nums1]
+  
+  return merged_arr
 
 
 def mergeSortedArrays2(arr1, arr2):
@@ -68,10 +73,8 @@ def mergeSortedArrays3(arr1, arr2):
 
 # print(mergeSortedArrays1([0,3,4,31], [2,5,6,30,32]))
 
-# Working func 1
 print(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30]))
 
-# Failing func 1
 print(mergeSortedArrays1([0,3,4,30], [2,5,6,31]))
 
 # print(mergeSortedArrays2([0,3,4,31], [3,4,5,30]))
