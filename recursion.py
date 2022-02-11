@@ -20,7 +20,7 @@ print(factorial(10))
 
 def fibonacci(n):
     """Calculate nth number in the fibonacci sequence."""
-    # Base case:
+    # Base cases: Conditions when this recursive function should stop execution.
     if n == 0:
         return 0
     if n == 1:
@@ -28,5 +28,5 @@ def fibonacci(n):
     return fibonacci(n-1)+fibonacci(n-2)
 
 
-print(fibonacci(4))
-0, 1, 1 , 2, 3, 5
+print(fibonacci(8))
+# 0, 1(1st), 1(2nd), 2(3rd), 3(4th), 5(5th), 8(6th)
