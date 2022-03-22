@@ -41,7 +41,7 @@ class LinkedList:
     def get_element(self, index):
         idx = 1
         current_node = self.head
-        while current_node.next != None:
+        while current_node != None:
             if idx == index:
                 return current_node.data
             current_node = current_node.next
@@ -56,8 +56,10 @@ class LinkedList:
         print("None")
 
 def reverse(ll):
+    pre=None
     current_node=ll.head
-    current_node.next
+    while current_node != None:
+        current=current_node.next
 
 
 if __name__ == "__main__":
@@ -76,5 +78,5 @@ if __name__ == "__main__":
     myLinkedList.preprend("11111")
     myLinkedList.list_elements()
     # print("-"*100)
-    print(f"{1}st elem is : {myLinkedList.get_element(1)}")
-    reverse(myLinkedList)
+    print(f"{6}th elem is : {myLinkedList.get_element(6)}")
+    # reverse(myLinkedList)
