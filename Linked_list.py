@@ -59,7 +59,7 @@ def reverse(ll):
     pre=None
     current_node=ll.head
     while current_node != None:
-        current=current_node.next
+        current_node=current_node.next
 
 
 if __name__ == "__main__":
@@ -79,4 +79,4 @@ if __name__ == "__main__":
     myLinkedList.list_elements()
     # print("-"*100)
     print(f"{6}th elem is : {myLinkedList.get_element(6)}")
-    # reverse(myLinkedList)
+    reverse(myLinkedList)
