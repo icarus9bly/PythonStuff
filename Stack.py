@@ -1,90 +1,43 @@
-# Python program to demonstrate
-# stack implementation using a linked list.
-# node class
-"""
-The functions associated with stack are:
-    empty() – Returns whether the stack is empty – Time Complexity : O(1)
-    size() – Returns the size of the stack – Time Complexity : O(1)
-    top() – Returns a reference to the top most element of the stack – Time Complexity : O(1)
-    push(g) – Adds the element ‘g’ at the top of the stack – Time Complexity : O(1)
-    pop() – Deletes the top most element of the stack – Time Complexity : O(1)
-"""
+# class Node:
+#     def __init__(self, data):
+#         self.data=data
+#         self.next=None
 
-
-class Node:
-
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+# class LinkedList:
+#     def __init__(self):
+#         pass
 
 
 class Stack:
-
-    # Initializing a stack.
-    # Use a dummy node, which is
-    # easier for handling edge cases.
-
     def __init__(self):
-        self.head = Node("head")
-        self.size = 0
-
-    # String representation of the stack
-
-    def __str__(self):
-        cur = self.head.next
-        out = ""
-        while cur:
-            out += str(cur.value) + "->"
-            cur = cur.next
-        return out[:-3]
-
-    # Get the current size of the stack
-
-    def getSize(self):
-        return self.size
-
-    # Check if the stack is empty
-
-    def isEmpty(self):
-        return self.size == 0
-
-    # Get the top item of the stack
-
-    def peek(self):
-
-        # Sanitary check to see if we
-        # are peeking an empty stack.
-        if self.isEmpty():
-            raise Exception("Peeking from an empty stack")
-        return self.head.next.value
-
-    # Push a value into the stack.
-
-    def push(self, value):
-        node = Node(value)
-        node.next = self.head.next
-        self.head.next = node
-        self.size += 1
-
-    # Remove a value from the stack and return.
-
+        self.items=[]
+    def push(self, data):
+        self.items.append(data)
     def pop(self):
-        if self.isEmpty():
-            raise Exception("Popping from an empty stack")
-        remove = self.head.next
-        self.head.next = self.head.next.next
-        self.size -= 1
-        return remove.value
+        return self.items.pop()
+    def peek(self):
+        return self.items[-1]
+    def size(self):
+        return len(self.items)       
+    def is_empty(self):
+        return not self.items
+    def __str__(self):
+        return str(self.items)
+def main():
+    mysta=Stack()
+    mysta.push(45)
+    mysta.push(43434345)
+    mysta.push(44)
+    mysta.push(549)
+    mysta.push(45)
+    mysta.push(7788)
+    mysta.push(44555)
+    print(mysta)
+    print(mysta.size())
+    print(mysta.pop())
+    print(mysta.peek())
+    print(mysta.is_empty())
+    print(mysta)
 
-
-# Driver Code
-if __name__ == "__main__":
-    stack = Stack()
-    for i in range(1, 11):
-        stack.push(i)
-    print(f"Stack: {stack}")
-
-    for _ in range(1, 6):
-        remove = stack.pop()
-        print(f"Pop: {remove}")
-    print(f"Stack: {stack}")
+if __name__=="__main__":
+    main()
