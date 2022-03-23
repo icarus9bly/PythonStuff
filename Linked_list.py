@@ -57,9 +57,15 @@ class LinkedList:
 
 def reverse(ll):
     pre=None
+    next=None
     current_node=ll.head
     while current_node != None:
-        current_node=current_node.next
+        next=current_node.next # Saving next of current node in a temp next pointer
+        current_node.next=pre # reversing
+        pre=current_node
+        current_node=next
+    return pre
+
 
 
 if __name__ == "__main__":
@@ -79,4 +85,4 @@ if __name__ == "__main__":
     myLinkedList.list_elements()
     # print("-"*100)
     print(f"{6}th elem is : {myLinkedList.get_element(6)}")
-    reverse(myLinkedList)
+    print(reverse(myLinkedList))
