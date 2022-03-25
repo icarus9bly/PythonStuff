@@ -21,7 +21,8 @@ class LinkedList:
         self.head = None
 
     def append(self, val):
-        # Current big O is o(n), it should be o(1)
+        # Insertion is o(1), even though it looks like o(n) because travesing is 0(n) but actual opreration is 0(1)
+        # https://stackoverflow.com/questions/840648/why-is-inserting-in-the-middle-of-a-linked-list-o1
         if self.head != None:
             curr_node = self.head
             while curr_node.next != None:
