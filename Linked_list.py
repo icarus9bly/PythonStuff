@@ -41,6 +41,18 @@ class LinkedList:
         else:
             self.head = Node(val)
 
+    def insert(self, index, val):
+        idx=1
+        curr_node=self.head
+        while curr_node != None:
+            if idx == index-1:
+                temp=curr_node.next
+                curr_node.next = Node(val)
+                curr_node.next.next = temp
+            idx+=1
+            curr_node=curr_node.next
+
+
     def get_element(self, index):
         idx = 1
         current_node = self.head
@@ -86,6 +98,8 @@ if __name__ == "__main__":
     # print(f'{myLinkedList.head.data}-->{myLinkedList.head.next.data}-->{myLinkedList.head.next.next.data}-->{myLinkedList.head.next.next.next.data}-->{myLinkedList.head.next.next.next.next.data}')
     myLinkedList.preprend("11111")
     myLinkedList.list_elements()
+    myLinkedList.insert(4,90909090)
+    myLinkedList.list_elements()
     # print("-"*100)
     print(f"{6}th elem is : {myLinkedList.get_element(6)}")
-    print(reverse(myLinkedList))
+    # print(reverse(myLinkedList).next.next.next.next.next.next)
