@@ -21,6 +21,7 @@ class LinkedList:
         self.head = None
 
     def append(self, val):
+        # Current big O is o(n), it should be o(1)
         if self.head != None:
             curr_node = self.head
             while curr_node.next != None:
@@ -31,6 +32,7 @@ class LinkedList:
             self.head = Node(val)
 
     def preprend(self, val):
+        # Current big O is o(1)
         if self.head != None:
             curr_elem = self.head
             self.head = Node(val)
