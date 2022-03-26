@@ -295,4 +295,13 @@ s1.school_name = 'PQR School'
 print('After')
 print(s1.name, s1.roll_no, s1.school_name)
 print(s2.name, s2.roll_no, s2.school_name)
+
+# Before
+# Emma 10 ABC School 
+# Jessa 20 ABC School 
+
+# After
+# Emma 10 PQR School
+# Jessa 20 ABC School
+
 ```
