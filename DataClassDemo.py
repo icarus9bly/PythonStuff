@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 
 
-
 class DataclassWithoutDataClass:
     """Every time a new field is add we need to add in constructor and change __str__ method and a lot of manual stuff
     for data oriented classes"""
