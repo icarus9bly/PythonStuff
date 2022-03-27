@@ -65,7 +65,7 @@ class ShippingContainerWithStaticMethod:
 
 #######################################################################################################################
 # When to use Class method or Static method?
-# Whenever there's a need to the class object to call class methods or constructor use @classmethod
+# Whenever there's a need of the class object to call class methods or constructor use @classmethod
 # Whenever there's no need to access class or instance objects use @staticmethod
 # @staticmethods are mostly implementation details of class
 # @staticmethods can also be moved outside the class to global module scope without the decorator, So it's a design choice as it's merely a logical organization of code
