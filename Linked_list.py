@@ -45,12 +45,27 @@ class LinkedList:
         idx=1
         curr_node=self.head
         while curr_node != None:
-            if idx == index-1:
+            if index == 1:
+                self.preprend(val)
+                break
+            elif idx == index-1:
                 temp=curr_node.next
                 curr_node.next = Node(val)
                 curr_node.next.next = temp
+                break
             idx+=1
             curr_node=curr_node.next
+
+    def remove(self, index):
+        """Slightly different way of doing remove than insert."""
+        counter=1
+        curr_node = self.head
+        while counter <= index-1:
+            if curr_node != None:
+                curr_node=curr_node.next
+            counter+=1
+        temp=curr_node.next
+        curr_node.next=temp.next
 
 
     def get_element(self, index):
@@ -98,7 +113,9 @@ if __name__ == "__main__":
     # print(f'{myLinkedList.head.data}-->{myLinkedList.head.next.data}-->{myLinkedList.head.next.next.data}-->{myLinkedList.head.next.next.next.data}-->{myLinkedList.head.next.next.next.next.data}')
     myLinkedList.preprend("11111")
     myLinkedList.list_elements()
-    myLinkedList.insert(4,90909090)
+    myLinkedList.insert(1,90909090)
+    myLinkedList.list_elements()
+    myLinkedList.remove(4)
     myLinkedList.list_elements()
     # print("-"*100)
     print(f"{6}th elem is : {myLinkedList.get_element(6)}")
