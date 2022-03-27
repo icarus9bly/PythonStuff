@@ -24,11 +24,10 @@ class LinkedList:
     def append(self, val):
         # Insertion is o(1), even though it looks like o(n) because travesing is 0(n) but actual opreration is 0(1)
         # https://stackoverflow.com/questions/840648/why-is-inserting-in-the-middle-of-a-linked-list-o1
-        if self.head != None:
-            curr_node = self.head
+        curr_node = self.head
+        if curr_node != None:
             while curr_node.next != None:
                 curr_node = curr_node.next
-                # print(curr_node)
             curr_node.next = Node(val)
         else:
             self.head = Node(val)
