@@ -65,15 +65,41 @@ class DoublyLinkedList:
             curr_node=curr_node.next
         print("None")
 
-db_ll=DoublyLinkedList()
-db_ll.append(56)
-db_ll.append(111)
-db_ll.append(909)
-db_ll.append(775)
-db_ll.show_items()
-db_ll.prepend(789)
-db_ll.show_items()
-db_ll.insert(4,444)
-db_ll.show_items()
-db_ll.remove(4)
-db_ll.show_items()
+def reverse(ll):
+    curr_node=ll.head
+    while curr_node.next != None:
+        curr_node = curr_node.next
+    while curr_node != None:
+        print(f"{curr_node}-->",end="")
+        curr_node = curr_node.pre
+    print("None")
+
+def main():
+    db_ll=DoublyLinkedList()
+    db_ll.append(56)
+    db_ll.append(111)
+    db_ll.append(909)
+    db_ll.append(775)
+    db_ll.show_items()
+    db_ll.prepend(789)
+    db_ll.show_items()
+    db_ll.insert(4,444)
+    db_ll.show_items()
+    db_ll.remove(4)
+    db_ll.show_items()
+    reverse(db_ll)   
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -90,11 +90,21 @@ def reverse(ll):
     pre=None
     next=None
     current_node=ll.head
+    """
+    75-->909-->111-->56-->789-->None
+    pre-->head-->next-->.....
+    During reversing
+    1st iter:
+    pre<--head
+    pre<--head(new_pre)<--next(new_head)
+    2nd iter:
+    move pre, head and next one right side
+    """
     while current_node != None:
         next=current_node.next # Saving next of current node in a temp next pointer
         current_node.next=pre # reversing
-        pre=current_node
-        current_node=next
+        pre=current_node # Move pre right to current_node
+        current_node=next # Move current_node right to next node
     return pre
 
 
