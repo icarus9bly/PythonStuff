@@ -17,6 +17,7 @@ class Node:
 
 
 class LinkedList:
+    """This class tells where are you sitting at i.e. where your head is aka self.head"""
     def __init__(self):
         self.head = None
 
