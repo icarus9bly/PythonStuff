@@ -61,7 +61,7 @@ class LinkedList:
         """Slightly different way of doing remove than insert."""
         counter=1
         curr_node = self.head
-        while counter <= index-1:
+        while counter < index:
             if curr_node != None:
                 curr_node=curr_node.next
             counter+=1

@@ -3,7 +3,7 @@ class Node:
         self.val = val
         self.next= None
         self.pre = None
-    def __str__(self):
+    def __repr__(self):
         return f"{self.val}"
 
 class DoublyLinkedList:
@@ -32,6 +32,32 @@ class DoublyLinkedList:
             self.head.next = temp
             temp.pre=self.head
 
+    def insert(self, index, val):
+        curr_node=self.head
+        counter=1
+        if index == 1:
+            self.prepend(val)
+        else:
+            while counter < index:
+                curr_node=curr_node.next
+                counter+=1
+            temp=curr_node.pre
+            temp.next=Node(val)
+            new_node=temp.next
+            new_node.pre=temp
+            new_node.next=curr_node
+            curr_node.pre=new_node
+
+    def remove(self, index):
+        curr_node=self.head
+        counter = 1
+        while counter < index:
+            curr_node = curr_node.next
+            counter+=1
+        temp=curr_node.next
+        curr_node.pre.next=temp
+        temp.pre=curr_node.pre
+
     def show_items(self):
         curr_node=self.head
         while curr_node != None:
@@ -46,4 +72,8 @@ db_ll.append(909)
 db_ll.append(775)
 db_ll.show_items()
 db_ll.prepend(789)
+db_ll.show_items()
+db_ll.insert(4,444)
+db_ll.show_items()
+db_ll.remove(4)
 db_ll.show_items()
