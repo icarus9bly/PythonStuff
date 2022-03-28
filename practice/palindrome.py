@@ -45,3 +45,4 @@ class Solution:
 
 obji=Solution()
 print(obji.isPalindrome(1001))
+isPalindrome(454)
