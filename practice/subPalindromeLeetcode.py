@@ -1,38 +1,28 @@
-# Return all subpalindromes in an string:
-# s = "aaa" | "a", "a", "a", "aa", "aa", "aaa" | Total: 6
-# s = "abc" | "a", "b", "c" | Total: 3
-
+# https://leetcode.com/problems/palindromic-substrings/
 class Solution:
     def countSubstrings(self, s: str) -> list:
-        result=[]
+        result=0
         index=0
         edge_left=0
         edge_right=len(s)-1
         while index < len(s): # abccba
             middle=s[index]
-            result.append(middle)
+            result+=1
             p1=index-1
             p2=index+1
-            while p1 >= edge_left and p2 <= edge_right:
-                "Expand left and right wrt middle and if touch boundary touch break"
-                if s[p1] == s[p2]:
-                    result.append(s[p1:p2+1])
-                    p1-=1
-                    p2+=1
-                else:
-                    break
-            p3=index
-            p4=index+1
-            while p3 >= edge_left and p4 <= edge_right:
-                if s[p3] == s[p4]:
-                    result.append(s[p3:p4+1])
-                    p3-=1
-                    p4+=1
-                else:
-                    break            
+            self.expand(index-1, index+1, edge_left, edge_right, result, s)
+            self.expand(index, index+1, edge_left, edge_right, result, s)           
             index+=1
-        print(result)
-        
+        print(result)     
+
+    def expand(self, p1, p2, l, r, result, s):        
+        while p1 >= l and p2 <= r:
+            if s[p1] == s[p2]:
+                result+=1
+                p1-=1
+                p2+=1
+            else:
+                break        
     def isPalindrome(self, stri):
         "o(n)"
         p1=0

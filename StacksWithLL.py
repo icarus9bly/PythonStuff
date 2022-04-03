@@ -17,7 +17,10 @@ class LinkedList:
         print("None")
 
 class Stack(LinkedList):
-    def push(self, val):
+    def __init__(self):
+        super().__init__()
+        self.top = None
+    def push(self, val): # It's like appending in the linked list
         curr_node=self.head
         if curr_node == None:
             self.head = Node(val)
@@ -26,7 +29,10 @@ class Stack(LinkedList):
                 curr_node=curr_node.next
             curr_node.next=Node(val)
     def pop(self):
-        pass
+        curr_node=self.head
+        while curr_node.next != None:
+            curr_node=curr_node.next
+        curr_node
 
     def peek(self):
         pass
