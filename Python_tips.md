@@ -305,3 +305,16 @@ print(s2.name, s2.roll_no, s2.school_name)
 # Jessa 20 ABC School
 
 ```
+ # Pass by reference vs by value
+ ``` python
+ myvar = 100
+ my2var = myvar
+ id(myvar)
+ id(my2var)
+ def primitive_are_pass_by_reference(x):
+    """ x does not changes outside this function """
+    x = x-1
+ def non_primitive_are_pass_by_value(x):
+    """ x changes outside this function """
+    x.pop()
+ ```
