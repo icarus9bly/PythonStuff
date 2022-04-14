@@ -2,9 +2,10 @@ def bubble_sort(x):
     for i in range(len(x)):
         for j in range(len(x)-1):
             if x[j] > x[j+1]:
-                temp = x[j]
-                x[j] = x[j+1]
-                x[j+1] = temp
+                # temp = x[j]
+                # x[j] = x[j+1]
+                # x[j+1] = temp
+                x[j], x[j+1] = x[j+1], x[j] # More pythonic
     return x
 
 
