@@ -13,6 +13,7 @@ def countSwaps(a):
                     a[index+1] = num
                     countSwapu = countSwapu+1
                     isSorted = False
+            print(a)
 
     print(f"arr is {a},count of swap is {countSwapu}")
 
