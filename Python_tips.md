@@ -319,7 +319,7 @@ print(s2.name, s2.roll_no, s2.school_name)
     x.pop()
  ```
 
-# Python -m flag
+# -m flag
 ```python
 # Python -m moduleTorunDemo 1stArg 2ndArg
 # Export this folder in syspath
@@ -328,4 +328,28 @@ print(s2.name, s2.roll_no, s2.school_name)
 import sys
 print("Doing something")
 print(sys.argv)
+```
+# filter(function, iterable) function should return True/False on iterable elements
+```python
+letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
+
+# a function that returns True if letter is vowel
+def filter_vowels(letter):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if letter in vowels:
+        return True 
+    return False
+
+filtered_vowels = filter(filter_vowels, letters)
+
+# converting to tuple
+vowels = tuple(filtered_vowels)
+print(vowels)
+
+# Without filter
+result = []
+for lt in letters:
+    if lt in ['a', 'e', 'i', 'o', 'u']:
+        result.append(lt)
+print(result)
 ```
