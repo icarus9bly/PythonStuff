@@ -356,3 +356,17 @@ def filter_vowels(letters):
     return result
 print(result)
 ```
+
+# Subprocess stdin, stderr, stdout
+
+- subprocess.PIPE is the pipe provided by subprocess to redirect the stdin, out and errors to subprocess which then can be acted upon.
+
+```python
+import subprocess
+sshing = subprocess.Popen(f"ssh username@localhost", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin = subprocess.PIPE)
+sshing.communicate(b'ls') # Stdin input can directly be send via communicate function as a byte array.
+# Or
+sshing = subprocess.Popen(f"ssh username@localhost", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin = subprocess.PIPE)
+sshing.stdin.write(b'pwd') # Or input to the stdin stream can also be send by stdin.write function.
+sshing.communicate()
+```
