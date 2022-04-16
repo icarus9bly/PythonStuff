@@ -335,8 +335,7 @@ letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
 
 # a function that returns True if letter is vowel
 def filter_vowels(letter):
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    if letter in vowels:
+    if letter in ['a', 'e', 'i', 'o', 'u']:
         return True 
     return False
 
@@ -347,9 +346,11 @@ vowels = tuple(filtered_vowels)
 print(vowels)
 
 # Without filter
-result = []
-for lt in letters:
-    if lt in ['a', 'e', 'i', 'o', 'u']:
-        result.append(lt)
+def filter_vowels(letters):
+    result = []
+    for lt in letters:
+        if lt in ['a', 'e', 'i', 'o', 'u']:
+            result.append(lt)
+    return result
 print(result)
 ```
