@@ -318,3 +318,14 @@ print(s2.name, s2.roll_no, s2.school_name)
     """ x changes outside this function """
     x.pop()
  ```
+
+# Python -m flag
+```python
+# Python -m moduleTorunDemo 1stArg 2ndArg
+# Export this folder in syspath
+# export PYTHONPATH="/Users/adips/Desktop/Notes-ToDos/rough_work"
+# 
+import sys
+print("Doing something")
+print(sys.argv)
+```
