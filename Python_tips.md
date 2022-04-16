@@ -329,7 +329,9 @@ import sys
 print("Doing something")
 print(sys.argv)
 ```
+
 # filter(function, iterable) function should return True/False on iterable elements
+
 ```python
 letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
 
