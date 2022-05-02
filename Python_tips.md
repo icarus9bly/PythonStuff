@@ -306,6 +306,8 @@ print(s2.name, s2.roll_no, s2.school_name)
 
 ```
  # Pass by reference vs by value
+ - https://app.pluralsight.com/course-player?clipId=b1bfb8d3-d5df-43b1-94c0-f143c441ede5
+ - Actually everything is passed by reference
  ``` python
  myvar = 100
  my2var = myvar
